@@ -1,0 +1,117 @@
+/* Color Palette Variables */
+root {
+  --alabaster-grey: #d8e2dcff;
+  --powder-petal: #ffe5d9ff;
+  --pastel-pink: #ffcad4ff;
+  --cherry-blossom: #f4acb7ff;
+  --dusty-mauve: #9d8189ff;
+}
+
+/* General Layout */
+body {
+    font-family: 'Poppins', Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #d8e2dcff; /* Alabaster Grey */
+    color: #333;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #f4acb7ff; /* Cherry Blossom */
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid #ffcad4ff; /* Pastel Pink */
+}
+
+nav {
+    background-color: #9d8189ff; /* Dusty Mauve */
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffe5d9ff; /* Powder Petal */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ffcad4ff; /* Pastel Pink */
+}
+
+/* Section Containers */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffe5d9ff; /* Powder Petal */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+    color: #9d8189ff; /* Dusty Mauve */
+}
+
+/* Image Gallery at the Bottom */
+#gallery {
+    text-align: center;
+}
+
+#gallery img {
+    border: 5px solid #ffcad4ff; /* Pastel Pink */
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Lists & Buttons */
+ul, ol {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #f4acb7ff; /* Cherry Blossom */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9d8189ff; /* Dusty Mauve */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d8e2dcff;
+    color: #9d8189ff;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #f4acb7ff;
+    text-decoration: none;
+    font-weight: bold;
+}
