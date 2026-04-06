@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materialize Image Cards Demo</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <style>
+    body {
+      background: #f5f5f5;
+    }
+    .container {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrapper teal">
+      <a href="#" class="brand-logo center">Image Card Demo</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Card 1 -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/250?random=1">
+            <span class="card-title">Nature</span>
+          </div>
+          <div class="card-content">
+            <p>This is a beautiful nature scene displayed using a Materialize image card.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 with Reveal -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="https://picsum.photos/400/250?random=2">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              City Life<i class="material-icons right">more_vert</i>
+            </span>
+            <p><a href="#">View Details</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              City Life<i class="material-icons right">close</i>
+            </span>
+            <p>This card reveals more information when clicked, showcasing interactive features.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 Horizontal -->
+      <div class="col s12 m12 l4">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://picsum.photos/200/200?random=3">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5>Travel</h5>
+              <p>Horizontal cards are great for combining images with descriptive text.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</body>
+</html>
