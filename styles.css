@@ -115,3 +115,35 @@ footer a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Custom Styles for non-Materialize pages */
+.container { width: 80%; margin: 0 auto; text-align: center; }
+
+.custom-nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.custom-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 45%;
+}
+
+.card img { width: 100%; height: auto; }
+
+.caption { font-weight: bold; margin-top: 10px; }

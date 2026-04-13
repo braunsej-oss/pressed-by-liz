@@ -1,121 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Pressed by Liz | Custom Press-Ons</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   
-   <style>
-       body {
-           background-color: #d8e2dc; /* alabaster-grey */
-       }
-       .header-bg {
-           background-color: #f4acb7 !important; /* cherry-blossom */
-           padding: 40px 0;
-       }
-       .nav-custom {
-           background-color: #9d8189 !important; /* dusty-mauve */
-       }
-       .section-bg {
-           background-color: #ffe5d9; /* powder-petal */
-           padding: 20px 0;
-       }
-       /* Customizing Carousel Height */
-       .carousel {
-           height: 400px;
-       }
-       .carousel-item img {
-           border-radius: 15px;
-       }
-       .collapsible-header {
-           background-color: #ffcad4 !important;
-           color: #9d8189;
-           font-weight: bold;
-       }
-       footer {
-           background-color: #9d8189;
-           padding: 20px 0;
-           color: white;
-       }
-   </style>
+    <meta charset="UTF-8">
+    <title>Materialize | Pressed by Liz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body { background-color: #d8e2dc; } /* Alabaster Grey */
+        nav { background-color: #9d8189 !important; } /* Dusty Mauve */
+        .card-panel { background-color: #ffe5d9 !important; border-radius: 15px; } /* Powder Petal */
+        .collapsible-header { background-color: #ffcad4 !important; color: #9d8189; font-weight: bold; }
+        .carousel { height: 400px; }
+    </style>
 </head>
 <body>
-
-   <nav class="nav-custom">
-       <div class="nav-wrapper container">
-           <a href="#" class="brand-logo right">Liz</a>
-           <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="#portfolio">Portfolio</a></li>
-               <li><a href="#faq">FAQ</a></li>          
-           </ul>
-       </div>
-   </nav>
-
-   <div class="section header-bg center-align">
-       <h1 class="white-text" style="font-weight: 200;">Pressed by Liz</h1>
-       <p class="white-text">Custom-sized, hand-painted, salon-quality nails.</p>
-   </div>
-
-   <div id="portfolio" class="section">
-       <div class="container center-align">
-           <h4 style="color: #9d8189;">Recent Sets</h4>
-           <div class="carousel">
-               <a class="carousel-item" href="#one!"><img src="https://lh3.googleusercontent.com/d/1NqmTJnOa83M1qfj3BBXDnElQZXVuGFUa"></a>
-               <a class="carousel-item" href="#two!"><img src="https://lh3.googleusercontent.com/d/1HHXrXLqtW3jkzpiwvV40nQXpRcRmjjFg"></a>
-               <a class="carousel-item" href="#three!"><img src="https://lh3.googleusercontent.com/d/1tfjkh2Ty1n3enkrSK2Hd3DPCTtkBHKmv"></a>
-           </div>
-       </div>
-   </div>
-
-   <div id="faq" class="section section-bg">
-       <div class="container">
-           <div class="row">
-               <div class="col s12 m6">
-                   <h2 style="color: #9d8189;">About My Craft</h2>
-                   <p>Every set I create is hand-painted with professional-grade gel products to ensure a salon-quality finish. Unlike mass-produced store brands, my press-ons are durable and reusable.</p>
-               </div>
-               <div class="col s12 m6">
-                   <h4 style="color: #9d8189;">Ordering FAQ</h4>
-                   <ul class="collapsible" data-collapsible="accordion">
-                       <li>
-                           <div class="collapsible-header"><i class="material-icons">straighten</i>How do I find my size?</div>
-                           <div class="collapsible-body"><span>I offer sizing kits or you can follow the measurement guide on my IG highlights!</span></div>
-                       </li>
-                       <li>
-                           <div class="collapsible-header"><i class="material-icons">Brush</i>Are they reusable?</div>
-                           <div class="collapsible-body"><span>Yes! With proper removal (warm water and oil), you can wear them multiple times.</span></div>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </div>
-
-   <footer class="center-align">
-        <div class="container">
-            <p>IG: <b>@pressed.by.liz</b></p>
-            <p>© 2026 Pressed by Liz</p>
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">Liz</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="learnmore.html">Learn More</a></li>
+                <li><a href="materialize.html">Materialize</a></li>
+                <li><a href="nails.html">Nails</a></li>
+            </ul>
         </div>
-   </footer>
+    </nav>
 
-   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <div class="container">
+        <div class="card-panel">
+            <h4 class="center-align" style="color:#9d8189">Media & Style</h4>
+            <div class="row">
+                <div class="col s12 m6 center">
+                    <img src="https://lh3.googleusercontent.com/d/1NqmTJnOa83M1qfj3BBXDnElQZXVuGFUa" alt="Nails" class="circle responsive-img" style="border: 5px solid #f4acb7;">
+                </div>
+                <div class="col s12 m6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/8DHP5XZPSjc" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="center"><b>Video:</b> Application Guide</p>
+                </div>
+            </div>
+        </div>
 
-   <script>
-       $(document).ready(function(){
-           // Initialize the Carousel
-           $('.carousel').carousel({
-               dist: -100, // Perspective
-               shift: 20,  // Spacing
-               padding: 20
-           });
+        <div class="carousel" id="nailCarousel">
+            <a class="carousel-item" href="#one!"><img src="https://lh3.googleusercontent.com/d/1HHXrXLqtW3jkzpiwvV40nQXpRcRmjjFg"></a>
+            <a class="carousel-item" href="#two!"><img src="https://lh3.googleusercontent.com/d/1tfjkh2Ty1n3enkrSK2Hd3DPCTtkBHKmv"></a>
+            <a class="carousel-item" href="#three!"><img src="https://lh3.googleusercontent.com/d/1NqmTJnOa83M1qfj3BBXDnElQZXVuGFUa"></a>
+        </div>
 
-           // Initialize the Collapsible
-           $('.collapsible').collapsible();
-       });
-   </script>
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">straighten</i>How do I size?</div>
+                <div class="collapsible-body"><span>Check my IG highlights for a sizing guide!</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.Carousel.init(document.querySelectorAll('.carousel'));
+            M.Collapsible.init(document.querySelectorAll('.collapsible'));
+        });
+    </script>
 </body>
 </html>

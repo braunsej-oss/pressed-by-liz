@@ -1,96 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Materialize Image Cards Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materialize JavaScript including Carousel + Collapsible Demo</title>
 
-  <!-- Materialize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Materialize CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+
+  <!-- Material Icons (optional, for icons in collapsible headers) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
 
   <style>
-    body {
-      background: #f5f5f5;
-    }
-    .container {
-      margin-top: 40px;
-    }
+    body { padding-bottom: 48px; }
+    header { margin-bottom: 24px; }
+    .demo-section { margin-top: 32px; }
+    .controls .btn { margin-right: 8px; margin-bottom: 8px; }
+    .carousel { margin-top: 12px; }
+
+
+    /* Optional: make collapsible content a bit easier to read for students */
+    .collapsible-body p { margin-top: 0; }
   </style>
 </head>
+
+
 <body>
+  <!-- Simple top nav -->
+  <header>
+    <nav class="blue">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">Carousel & Collapsible with Materialize</a>
+     
+    </nav>
+  </header>
+<div id="radio-section" class="section container">
+       <h2>Select Your Favorite Pastry</h2>
+       <form>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value="Croissant" onclick="displayPastry()"/>
+                   <span>Croissant</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value="Muffin" onclick="displayPastry()"/>
+                   <span>Muffin</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value="Donut" onclick="displayPastry()"/>
+                   <span>Donut</span>
+               </label>
+           </p>
+       </form>
+       <div id="pastry-response"></div>
+   </div>
+ <!-- Email Feedback Section -->
+   <div id="feedback-section" class="section container">
+       <h2>Subscribe for Updates</h2>
+       <form onsubmit="submitEmail(event)">
+           <div class="input-field">
+               <input id="email" type="email" required>
+               <label for="email">Email</label>
+           </div>
+           <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+       </form>
+       <div id="email-response"></div>
+   </div>
 
-  <nav>
-    <div class="nav-wrapper teal">
-      <a href="#" class="brand-logo center">Image Card Demo</a>
-    </div>
-  </nav>
 
-  <div class="container">
-    <div class="row">
+  <main class="container">
+    <h4>Materialize Carousel + Collapsible</h4>
+    <p class="grey-text text-darken-1">
+      This page demonstrates two components (Carousel + Collapsible) with working initialization code.
+    </p>
 
-      <!-- Card 1 -->
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://picsum.photos/400/250?random=1">
-            <span class="card-title">Nature</span>
-          </div>
-          <div class="card-content">
-            <p>This is a beautiful nature scene displayed using a Materialize image card.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Learn More</a>
-          </div>
-        </div>
+
+    <!-- BASIC CAROUSEL -->
+    <section id="basic" class="demo-section">
+      <h5>1) Basic Carousel</h5>
+
+
+      <div class="controls">
+        <button id="basicPrev" class="btn waves-effect">Prev</button>
+        <button id="basicNext" class="btn waves-effect">Next</button>
+        <button id="basicGo3" class="btn waves-effect">Go to #3</button>
       </div>
 
-      <!-- Card 2 with Reveal -->
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="https://picsum.photos/400/250?random=2">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">
-              City Life<i class="material-icons right">more_vert</i>
-            </span>
-            <p><a href="#">View Details</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">
-              City Life<i class="material-icons right">close</i>
-            </span>
-            <p>This card reveals more information when clicked, showcasing interactive features.</p>
-          </div>
-        </div>
+
+      <div class="carousel" id="basicCarousel">
+        <a class="carousel-item" href="#one!">
+          <img alt="Nature 1" src="https://picsum.photos/id/1015/400/400" />
+        </a>
+        <a class="carousel-item" href="#two!">
+          <img alt="Nature 2" src="https://picsum.photos/id/1025/400/400" />
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img alt="Nature 3" src="https://picsum.photos/id/1035/400/400" />
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img alt="Nature 4" src="https://picsum.photos/id/1045/400/400" />
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img alt="Nature 5" src="https://picsum.photos/id/1055/400/400" />
+        </a>
       </div>
 
-      <!-- Card 3 Horizontal -->
-      <div class="col s12 m12 l4">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://picsum.photos/200/200?random=3">
+
+      <p class="grey-text">
+        Tip: Try dragging/swiping the carousel.
+      </p>
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- COLLAPSIBLE -->
+    <section id="collapsible" class="demo-section">
+      <h5>2) Collapsible</h5>
+      <p class="grey-text text-darken-1">
+        Below is a standard collapsible list. You can also enable "accordion" behavior or allow multiple sections open.
+      </p>
+
+
+      <!-- Collapsible markup -->
+      <ul class="collapsible" id="demoCollapsible">
+        <li class="active">
+          <div class="collapsible-header">
+            <i class="material-icons">info</i>
+            What is Materialize?
           </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5>Travel</h5>
-              <p>Horizontal cards are great for combining images with descriptive text.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Explore</a>
-            </div>
+          <div class="collapsible-body">
+            <p>
+              Materialize is a front-end framework based on Material Design, offering pre-built components and styles.
+            </p>
           </div>
-        </div>
+        </li>
+
+
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">code</i>
+            What do I need to make components work?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              You generally need the Materialize CSS file, the Materialize JS file, and an initialization call in JavaScript.
+            </p>
+          </div>
+        </li>
+
+
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">settings</i>
+            Can I customize behavior?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              Yes. For example, you can allow multiple sections open (non-accordion) or configure animations via options.
+            </p>
+          </div>
+        </li>
+      </ul>
+   
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- FULL-WIDTH CAROUSEL SLIDER -->
+    <section id="fullwidth" class="demo-section">
+      <h5>3) Full-Width Carousel Slider</h5>
+
+
+      <div class="controls">
+        <button id="fwPrev" class="btn waves-effect">Prev</button>
+        <button id="fwNext" class="btn waves-effect">Next</button>
+        <button id="fwToggle" class="btn waves-effect">Toggle Autoplay</button>
       </div>
 
-    </div>
-  </div>
 
-  <!-- Materialize JS -->
+      <div class="carousel carousel-slider" id="fullWidthCarousel">
+        <a class="carousel-item" href="#slide1!">
+          <img alt="Slide 1" src="https://picsum.photos/id/1065/1200/500" />
+        </a>
+        <a class="carousel-item" href="#slide2!">
+          <img alt="Slide 2" src="https://picsum.photos/id/1075/1200/500" />
+        </a>
+        <a class="carousel-item" href="#slide3!">
+          <img alt="Slide 3" src="https://picsum.photos/id/1085/1200/500" />
+        </a>
+      </div>
+
+
+      <p class="grey-text">
+        This uses <code>carousel carousel-slider</code> with <code>fullWidth: true</code> and indicators enabled.
+      </p>
+    </section>
+  </main>
+
+
+  <!-- Materialize JS (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- Google Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // =========================
+      // 1) Basic carousel init
+      // =========================
+      const basicElem = document.querySelector('#basicCarousel');
+      const basicInstance = M.Carousel.init(basicElem, {
+        duration: 200,
+        dist: -100,
+        shift: 0,
+        padding: 0,
+        numVisible: 5,
+        indicators: false
+      });
+
+
+      document.querySelector('#basicPrev').addEventListener('click', () => basicInstance.prev());
+      document.querySelector('#basicNext').addEventListener('click', () => basicInstance.next());
+      document.querySelector('#basicGo3').addEventListener('click', () => basicInstance.set(2)); // 0-based index
+
+
+      // =========================
+      // 2) Collapsible init
+      // =========================
+      const collElem = document.querySelector('#demoCollapsible');
+
+
+      // Option A: Accordion behavior (only one open at a time) -> accordion: true
+      // Option B: Multiple open at once -> accordion: false
+      const collInstance = M.Collapsible.init(collElem, {
+        accordion: false
+      });
+
+
+     
+
+
+      // =========================
+      // 3) Full-width carousel-slider init
+      // =========================
+      const fwElem = document.querySelector('#fullWidthCarousel');
+      const fwInstance = M.Carousel.init(fwElem, {
+        fullWidth: true,
+        indicators: true
+      });
+
+
+      document.querySelector('#fwPrev').addEventListener('click', () => fwInstance.prev());
+      document.querySelector('#fwNext').addEventListener('click', () => fwInstance.next());
+
+
+      // Optional autoplay for full-width
+      let autoplayOn = false;
+      let autoplayTimer = null;
+
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(() => fwInstance.next(), 3000);
+        autoplayOn = true;
+      }
+      function stopAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+        autoplayOn = false;
+      }
+
+
+      document.querySelector('#fwToggle').addEventListener('click', () => {
+        if (autoplayOn) stopAutoplay();
+        else startAutoplay();
+      });
+    });
+  </script>
+   <script>
+       // Initialize modal
+       document.addEventListener('DOMContentLoaded', function() {
+           var elems = document.querySelectorAll('.modal');
+           var instances = M.Modal.init(elems);
+       });
+
+
+
+
+       // Function to display selected pastry
+       function displayPastry() {
+           const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+           document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+       }
+       // Function to handle email subscription form submission
+       function submitEmail(event) {
+           event.preventDefault();
+           const email = document.getElementById('email').value;
+           document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           document.getElementById('email').value = ''; // Clear the input
+
+
+
+
+           // Display modal
+           const modalText = document.getElementById('modal-content-text');
+           modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           const modal = M.Modal.getInstance(document.getElementById('modal1'));
+           modal.open();
+       }
+   </script>
+
 
 </body>
 </html>
